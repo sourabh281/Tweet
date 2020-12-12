@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Tweet</string>
+
+    // Login_Activity
+    <string name="edtEmailHint">Email</string>
+    <string name="edtUserPasswordHint">Password</string>
+    <string name="btnLoginText">Login</string>
+    <string name="txtDontHaveAccount">Don\'t Have An Account ?</string>
+    <string name="txtTransferToSignUpActivity">SIGNUP</string>
+    <string name="imgAppIconDesc">This Image shows Icon Of the tweet App</string>
+    <string name="TxtSuccessMsg">Successfully Created Tweet Account</string>
+    <string name="TxtErrorMsg">Something Went Wrong</string>
+    <string name="txtForgetPass">Forget Password?</string>
+    <string name="txtBtnReset">RESET</string>
+    <string name="txtResetPassMsg">Successfully Sent an Email To Reset Password</string>
+    <string name="txtUnableToSentEmailToResetPassMsg">You Don\'t Have Tweet Account</string>
+
+    // SignUp Activity
+    <string name="edtSetUserName">Create Tweet UserName</string>
+    <string name="edtSetEmail">Enter Email</string>
+    <string name="edtSetPassword">Create Tweet Password</string>
+    <string name="btnSignUp">SignUp</string>
+    <string name="TxtWelcmToTweet">WELCOME TO TWEET FAMILY</string>
+    <string name="TxtAlreadyHaveAccount">Already Have An Tweet Account ?</string>
+    <string name="txtTransferToLoginActivity">LOGIN</string>
+
+
+    // Success Dialog
+    <string name="txtSuccessDialogTitle">BINGO!!</string>
+    <string name="txtSuccessDialogText">Successfully Logged In</string>
+    <string name="btnSuccessDialog">OK</string>
+
+    // Error Dialog
+    <string name="txtErrorDialogTitle">OOPS!!</string>
+    <string name="txtErrorDialogText">Something Went Wrong </string>
+    <string name="btnErrorDialog">TRY AGAIN</string>
+
+
+</resources>
