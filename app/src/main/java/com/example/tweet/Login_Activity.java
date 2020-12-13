@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.RequestPasswordResetCallback;
 
 public class Login_Activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -53,9 +55,11 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                   public void done(ParseUser user, ParseException e) {
                       if (user != null && e == null){
 
-                          customSuccessDialog successDialog = new customSuccessDialog();
-                          successDialog.ShowSuccessDialog(Login_Activity.this , R.string.TxtWelcmToTweet);
+                         // customSuccessDialog successDialog = new customSuccessDialog();
+                          //successDialog.ShowSuccessDialog(Login_Activity.this , R.string.TxtWelcmToTweet);
 
+                          Toast.makeText(Login_Activity.this ,
+                                  R.string.TxtWelcmToTweet , Toast.LENGTH_SHORT).show();
                           Intent intent = new Intent(Login_Activity.this , TweetPageActivity.class);
                           startActivity(intent);
                           //finish();
@@ -85,8 +89,25 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
 
                 if (ParseUser.getCurrentUser() != null){
 
-                    customSuccessDialog successDialog = new customSuccessDialog();
-                    successDialog.ShowSuccessDialog(Login_Activity.this , R.string.txtResetPassMsg);
+
+                    ParseUser.requestPasswordResetInBackground(ParseUser.getCurrentUser().
+                            get("email").toString(), new RequestPasswordResetCallback() {
+                        @Override
+                        public void done(ParseException e) {
+
+                            if (e == null){
+
+
+                                customSuccessDialog successDialog = new customSuccessDialog();
+                                successDialog.ShowSuccessDialog(Login_Activity.this , R.string.txtResetPassMsg);
+                            }else {
+
+                                customErrorDialog customerrordialog = new customErrorDialog();
+                                customerrordialog.ShowErrorDialog(Login_Activity.this , R.string.TxtErrorMsg);
+                            }
+
+                        }
+                    });
 
 
                 }else {

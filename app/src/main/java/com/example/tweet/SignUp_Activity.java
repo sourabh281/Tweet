@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -57,12 +58,13 @@ public class SignUp_Activity extends AppCompatActivity implements View.OnClickLi
 
                         if (e == null){
 
-                            customSuccessDialog successDialog = new customSuccessDialog();
-                            successDialog.ShowSuccessDialog(SignUp_Activity.this , R.string.TxtSuccessMsg);
+                           // customSuccessDialog successDialog = new customSuccessDialog();
+                            // successDialog.ShowSuccessDialog(SignUp_Activity.this , R.string.TxtSuccessMsg);
+                            Toast.makeText(SignUp_Activity.this , R.string.TxtSuccessMsg ,
+                                    Toast.LENGTH_SHORT).show();
 
-                            edtUserName.getText().clear();
-                            edtUserEmail.getText().clear();
-                            edtUserPassword.getText().clear();
+                            Intent intent = new Intent(SignUp_Activity.this , Login_Activity.class);
+                            startActivity(intent);
 
                         }else {
                             try {
