@@ -5,7 +5,11 @@
         android:id="@+id/logout_user"
         android:orderInCategory="100"
         app:showAsAction="never"
-        android:title="Logout"/>
-
-
+        android:title="Logout" />
+    <item
+        android:id="@+id/tweetBtn"
+        android:title="TweetButton"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:orderInCategory="100" />
 </menu>

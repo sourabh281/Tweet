@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryLightColor"
+    android:background="@color/background_color"
     tools:context=".SignUp_Activity">
 
     <EditText
@@ -14,7 +14,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="5dp"
-        android:background="#fff"
+        android:background="@color/background_color"
         android:ems="10"
         android:hint="@string/edtSetUserName"
         android:inputType="textPersonName"
@@ -24,7 +24,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primaryTextColor"/>
 
     <EditText
         android:id="@+id/edtUserEmail"
@@ -33,7 +34,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:background="#fff"
+        android:background="@color/background_color"
         android:ems="10"
         android:hint="@string/edtSetEmail"
         android:inputType="textEmailAddress"
@@ -42,7 +43,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUserName"
+        android:textColor="@color/primaryTextColor"/>
 
     <EditText
         android:id="@+id/edtUserPassword"
@@ -51,7 +53,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:background="#fff"
+        android:background="@color/background_color"
         android:ems="10"
         android:hint="@string/edtSetPassword"
         android:inputType="textPassword"
@@ -75,7 +77,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUserPassword"
+        android:background="@color/surfaceLightColor"/>
 
     <TextView
         android:id="@+id/textView2"

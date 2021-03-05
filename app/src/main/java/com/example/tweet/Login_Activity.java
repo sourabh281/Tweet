@@ -41,6 +41,15 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
         txtResetPassword.setOnClickListener(Login_Activity.this);
 
 
+        if (ParseUser.getCurrentUser() != null){
+
+
+            Intent intent = new Intent(Login_Activity.this , TweetPageActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+
     }
 
     @Override
@@ -62,7 +71,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                                   R.string.TxtWelcmToTweet , Toast.LENGTH_SHORT).show();
                           Intent intent = new Intent(Login_Activity.this , TweetPageActivity.class);
                           startActivity(intent);
-                          //finish();
+                          finish();
 
                       }else {
 
@@ -83,7 +92,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
 
                 Intent intent = new Intent(Login_Activity.this , SignUp_Activity.class);
                 startActivity(intent);
-                //finish();
+                finish();
                 break;
             case R.id.txtResetPassword:
 
@@ -99,12 +108,15 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
 
 
                                 customSuccessDialog successDialog = new customSuccessDialog();
-                                successDialog.ShowSuccessDialog(Login_Activity.this , R.string.txtResetPassMsg);
+                                successDialog.ShowSuccessDialog(Login_Activity.this
+                                        , R.string.txtResetPassMsg);
                             }else {
 
                                 customErrorDialog customerrordialog = new customErrorDialog();
                                 customerrordialog.ShowErrorDialog(Login_Activity.this , R.string.TxtErrorMsg);
                             }
+                            edtEnterUserEmail.getText().clear();
+                            edtEnterUserPassword.getText().clear();
 
                         }
                     });

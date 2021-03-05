@@ -58,19 +58,22 @@ public class SignUp_Activity extends AppCompatActivity implements View.OnClickLi
 
                         if (e == null){
 
-                           // customSuccessDialog successDialog = new customSuccessDialog();
-                            // successDialog.ShowSuccessDialog(SignUp_Activity.this , R.string.TxtSuccessMsg);
-                            Toast.makeText(SignUp_Activity.this , R.string.TxtSuccessMsg ,
-                                    Toast.LENGTH_SHORT).show();
+//                           customSuccessDialog successDialog = new customSuccessDialog();
+//                           successDialog.ShowSuccessDialog(SignUp_Activity.this , R.string.TxtSuccessMsg);
+                           Toast.makeText(SignUp_Activity.this , R.string.TxtSuccessMsg ,
+                                   Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(SignUp_Activity.this , Login_Activity.class);
                             startActivity(intent);
+                            finish();
 
                         }else {
                             try {
-                                customErrorDialog errorDialog = new customErrorDialog();
-                                errorDialog.ShowErrorDialog(SignUp_Activity.this , R.string.TxtErrorMsg);
+                                //customErrorDialog errorDialog = new customErrorDialog();
+                              //  errorDialog.ShowErrorDialog(SignUp_Activity.this , R.string.TxtErrorMsg);
 
+                                Toast.makeText(SignUp_Activity.this , R.string.TxtErrorMsg ,
+                                        Toast.LENGTH_SHORT).show();
                                 edtUserName.getText().clear();
                                 edtUserEmail.getText().clear();
                                 edtUserPassword.getText().clear();
@@ -89,7 +92,7 @@ public class SignUp_Activity extends AppCompatActivity implements View.OnClickLi
 
                 Intent intent = new Intent(SignUp_Activity.this , Login_Activity.class);
                 startActivity(intent);
-                // finish();
+                finish();
                 break;
 
         }

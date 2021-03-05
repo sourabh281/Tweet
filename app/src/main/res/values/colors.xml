@@ -12,7 +12,17 @@
 
     <color name="secondaryDarkColor">#006e9b</color>
 
-    <color name="primaryTextColor">#ffffff</color>
+    <color name="primaryTextColor">#000000</color>
 
-    <color name="secondaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#171717</color>
+
+    <color name="tertiaryTextColor">#4F4F4F</color>
+
+    <color name="surface_color">#fff</color>
+
+    <color name="surfaceLightColor">#5d7b9c</color>
+
+    <color name="background_color">#fff</color>
+
+    <color name="error_color">#FF0000</color>
 </resources>

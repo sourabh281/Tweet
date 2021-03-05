@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tweet</string>
+    <string name="app_name">TWEET</string>
 
     // Login_Activity
     <string name="edtEmailHint">Email</string>
@@ -34,6 +34,22 @@
     <string name="txtErrorDialogTitle">OOPS!!</string>
     <string name="txtErrorDialogText">Something Went Wrong </string>
     <string name="btnErrorDialog">TRY AGAIN</string>
+
+    // Tweet Page
+    <string name="imgTweetPageBackGroundDesc">This Image is Background image of
+        tweet page To just look good</string>
+
+    // Send Tweet Activity
+    <string name="sendTweetTitle">Compose Tweet</string>
+    <string name="sendComposedTweetBtnText">Send</string>
+    <string name="MultilineEditText">Compose Your Tweet Here...</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">ZUt4n2RCRarbymRvHV1252kvtOjSGiwHkGlcLTAJ</string>
+    <string name="back4app_client_key">GBl2AUWaWG2BEjjohO1tNevgUUIAucQKLuckU8at</string>
+    <string name="txtComposeTweetProgressDialog">Loading...</string>
+    <string name="txtComposeTweetSuccesMessege">Successfully Shared Your Tweet</string>
 
 
 </resources>
